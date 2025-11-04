@@ -63,6 +63,9 @@ section {
 }
 .submit {
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   background: rgb(18, 18, 18);
   color: white;
   padding: 12px 35px;
@@ -102,7 +105,5 @@ section {
   border: 1px solid #ddd;
   padding: 8px;
 }
-.leaderboard{
-  align-items: center;
-}
+
 

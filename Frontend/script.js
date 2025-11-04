@@ -26,10 +26,10 @@ axios.get("http://localhost/ASS1/Backend/get_score.php").then((response) => {
     });
     table.appendChild(tbody);
     leaderboardDiv.appendChild(table);
-    const button=document.createElement("button");
-    button.className='submit';
-    button.textContent="Add Score";
-    leaderboardDiv.appendChild(button);
+    const btn=document.createElement("button");
+    btn.className='submit';
+    btn.textContent="Add Score";
+    leaderboardDiv.appendChild(btn);
      button.addEventListener('click', () => {
         window.location.href = 'leaderboard.html';
       });
