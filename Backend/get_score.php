@@ -7,7 +7,10 @@ if ($_SERVER["REQUEST_METHOD"] !== 'GET') {
     echo json_encode(["error" => "Method Not Allowed"]);
     exit;
 }
-$stmt = $con->prepare("SELECT * FROM player_scores");
+$stmt = $con->prepare("SELECT * FROM player_scores
+ORDER BY score DESC,duration DESC
+LIMIT 5
+");
 if ($stmt->execute()) {
     $result = $stmt->get_result();
     $scores = $result->fetch_all(MYSQLI_ASSOC);
