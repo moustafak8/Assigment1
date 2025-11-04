@@ -1,0 +1,24 @@
+<?php
+require_once("connection.php");
+header("Content-Type: application/json");
+if ($_SERVER["REQUEST_METHOD"] != 'POST') {
+    http_response_code(405);
+    echo json_encode(["error" => "Method Not Allowed"]);
+    exit;
+}
+$data = json_decode(file_get_contents("php://input"), true);
+if (!isset($data['name'], $data['score'], $data['duration'])) {
+    http_response_code(400);
+    echo json_encode(["error" => "Missing Variables"]);
+    exit;
+}
+$stmt = $con->prepare("INSERT INTO player_scores (name, score, duration) VALUES (?, ?, ?)");
+$stmt->bind_param("sss", $data['name'], $data['score'], $data['duration']);
+if ($stmt->execute()) {
+    echo json_encode(["success" => true, "id" => $stmt->insert_id]);
+} else {
+    http_response_code(500);
+    echo json_encode(["error" => "Failed to add record"]);
+}
+$stmt->close();
+$con->close();
