@@ -1,0 +1,35 @@
+axios.get("http://localhost/ASS1/Backend/get_score.php").then((response) => {
+  console.log(response.data);
+  if (response.data.success) {
+    const scores = response.data.scores;
+    const leaderboardDiv = document.querySelector(".leaderboard");
+    const table = document.createElement("table");
+    const thead = document.createElement("thead");
+    const headerRow = document.createElement("tr");
+    ["Rank", "Player", "Score", "Duration"].forEach((header) => {
+      const th = document.createElement("th");
+      th.textContent = header;
+      headerRow.appendChild(th);
+    });
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+    const tbody = document.createElement("tbody");
+    scores.forEach((score, index) => {
+      const row = document.createElement("tr");
+      const cells = [index + 1, score.name, score.score, score.duration];
+      cells.forEach((cellData) => {
+        const td = document.createElement("td");
+        td.textContent = cellData;   
+        row.appendChild(td);
+      });
+      tbody.appendChild(row);
+    });
+    table.appendChild(tbody);
+
+    leaderboardDiv.appendChild(table);
+  } else {
+    console.error("Failed to fetch scores:", response.data.error);
+    document.querySelector(".leaderboard").innerHTML +=
+      "<p>Failed to load leaderboard.</p>";
+  }
+});
