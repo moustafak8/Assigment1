@@ -25,8 +25,15 @@ axios.get("http://localhost/ASS1/Backend/get_score.php").then((response) => {
       tbody.appendChild(row);
     });
     table.appendChild(tbody);
-
     leaderboardDiv.appendChild(table);
+    const button=document.createElement("button");
+    button.className='submit';
+    button.textContent="Add Score";
+    leaderboardDiv.appendChild(button);
+     button.addEventListener('click', () => {
+        window.location.href = 'leaderboard.html';
+      });
+
   } else {
     console.error("Failed to fetch scores:", response.data.error);
     document.querySelector(".leaderboard").innerHTML +=

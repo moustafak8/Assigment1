@@ -102,5 +102,7 @@ section {
   border: 1px solid #ddd;
   padding: 8px;
 }
-
+.leaderboard{
+  align-items: center;
+}
 
