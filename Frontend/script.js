@@ -30,7 +30,7 @@ axios.get("http://localhost/ASS1/Backend/get_score.php").then((response) => {
     btn.className='submit';
     btn.textContent="Add Score";
     leaderboardDiv.appendChild(btn);
-     button.addEventListener('click', () => {
+     btn.addEventListener('click', () => {
         window.location.href = 'leaderboard.html';
       });
 
@@ -40,3 +40,8 @@ axios.get("http://localhost/ASS1/Backend/get_score.php").then((response) => {
       "<p>Failed to load leaderboard.</p>";
   }
 });
+const b=document.getElementById("d");
+const s=document.querySelector(".download");
+ b.addEventListener('click', () => {
+       s.scrollIntoView({ behavior: 'smooth' });
+      });

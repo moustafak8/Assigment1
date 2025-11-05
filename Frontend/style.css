@@ -5,6 +5,7 @@
   text-transform: capitalize;
   transition: all 0.2s linear;
 }
+
 header {
   position: fixed;
   top: 0;
@@ -18,20 +19,24 @@ header {
   box-shadow: 0 5px 2px (0, 0, 0, 0.1);
   height: 10px;
 }
+
 header .logo {
   text-decoration: none;
   font-size: 20px;
   margin-left: -120px;
   font-weight: bolder;
-  color: rgba(62, 68, 72, 0.95);
+  color: rgba(112, 236, 98, 0.95);
 }
+
 header .logo i {
   text-decoration: none;
-  padding-right:3px;
+  padding-right: 3px;
 }
+
 section {
   padding: 2rem 9%;
 }
+
 .home {
   display: flex;
   flex-wrap: wrap;
@@ -44,23 +49,28 @@ section {
   text-align: center;
   background-blend-mode: darken;
 }
+
 .home .content {
   flex: 1 1 40rem;
   padding-top: 6.5rem;
   color: aliceblue;
 }
+
 .home .content h1 {
   font-size: 50px;
   text-align: center;
 }
+
 .home .content h3 {
   font-family: sans-serif;
   font-size: 20px;
 }
+
 .home .content p {
   text-align: center;
   margin-top: 17px;
 }
+
 .submit {
   margin-top: 20px;
   margin-left: auto;
@@ -78,32 +88,139 @@ section {
   letter-spacing: 1px;
   box-shadow: 0 4px 15px rgba(216, 206, 202, 0.3);
 }
+
 .submit:hover {
   background: #cf8169;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(109, 97, 93, 0.4);
 }
+
 .submit:active {
   transform: translateY(0);
   box-shadow: 0 4px 15px rgba(129, 116, 111, 0.3);
 }
-.leaderboard  h1 {
+
+.leaderboard h1 {
   color: rgb(20, 20, 19);
   font-size: 50px;
   text-align: center;
 }
-.leaderboard table{
+
+.leaderboard table {
   width: 100%;
   border-collapse: collapse;
 }
-.leaderboard th{
+
+.leaderboard th {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
 }
-.leaderboard td{
+
+.leaderboard td {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
+.download {
+  margin: 0 auto;
+  padding: 20px;
+}
 
+.head {
+  background: rgb(7, 7, 7);
+  color: #fff;
+  margin-bottom: 30px;
+  padding: 30px 0;
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+.head h1 {
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.head h3 {
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.download-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.image {
+  width: 600px;
+  height: 500px;
+  border-radius: 15px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+
+.download-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.download-text {
+  margin: 0 10px 10px 0;
+  font-size: 2rem;
+  color: #0a0909;
+  letter-spacing: normal;
+  max-width: 650px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.download-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.btn,
+.btn2 {
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  font-weight: 600;
+}
+
+.btn {
+  background-color: #57db57;
+}
+
+.btn2 {
+  background-color: #4653cd;
+}
+
+@media (max-width: 800px) {
+  .download-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .download-content {
+    align-items: center;
+  }
+
+  .download-text {
+    max-width: 100%;
+  }
+}
