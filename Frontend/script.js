@@ -28,7 +28,7 @@ axios.get("http://localhost/ASS1/Backend/get_score.php").then((response) => {
     leaderboardDiv.appendChild(table);
     const btn=document.createElement("button");
     btn.className='submit';
-    btn.textContent="Add Score";
+    btn.textContent="Leaderboard";
     leaderboardDiv.appendChild(btn);
      btn.addEventListener('click', () => {
         window.location.href = 'leaderboard.html';

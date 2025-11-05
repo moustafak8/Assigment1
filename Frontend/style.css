@@ -25,7 +25,7 @@ header .logo {
   font-size: 20px;
   margin-left: -120px;
   font-weight: bolder;
-  color: rgba(112, 236, 98, 0.95);
+  color: #038c5a;
 }
 
 header .logo i {
@@ -90,7 +90,7 @@ section {
 }
 
 .submit:hover {
-  background: #cf8169;
+  background: #013220;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(109, 97, 93, 0.4);
 }
@@ -101,7 +101,7 @@ section {
 }
 
 .leaderboard h1 {
-  color: rgb(20, 20, 19);
+  color: rgb(247, 247, 241);
   font-size: 50px;
   text-align: center;
 }
@@ -195,7 +195,7 @@ section {
   padding: 12px 25px;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 10px;
   display: inline-block;
   text-align: center;
   font-weight: 600;
