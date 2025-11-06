@@ -1,6 +1,5 @@
 <?php
 require_once("config/connection.php");
-header("Content-Type: application/json");
 if ($_SERVER["REQUEST_METHOD"] != 'POST') {
     http_response_code(405);
     echo json_encode(["error" => "Method Not Allowed"]);
@@ -9,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] != 'POST') {
 $data = json_decode(file_get_contents("php://input"), true);
 $score=rand(20,100);
 $duration=rand(5,60);
-if (!isset($data['name'], $score, $duration)) {
+if (!isset($data['name'], $data['score'], $data['duration']) &&empty($data['name'])) {
     http_response_code(400);
     echo json_encode(["error" => "Missing Variables"]);
     exit;
