@@ -43,7 +43,7 @@ section {
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
-  background: rgba(0, 0, 0, 0.7) url("modern-poker-cards-composition.jpg") center center fixed;
+  background: rgba(0, 0, 0, 0.7) url("../img/modern-poker-cards-composition.jpg") center center fixed;
   background-size: cover;
   background-position: center;
   text-align: center;

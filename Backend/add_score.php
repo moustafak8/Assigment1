@@ -1,5 +1,5 @@
 <?php
-require_once("connection.php");
+require_once("config/connection.php");
 header("Content-Type: application/json");
 if ($_SERVER["REQUEST_METHOD"] != 'POST') {
     http_response_code(405);
@@ -15,7 +15,7 @@ if (!isset($data['name'], $score, $duration)) {
     exit;
 }
 $stmt = $con->prepare("INSERT INTO player_scores (name, score, duration) VALUES (?, ?, ?)");
-$stmt->bind_param("sss", $data['name'], $score, $duration);
+$stmt->bind_param("sii", $data['name'], $score, $duration);
 if ($stmt->execute()) {
     echo json_encode(["success" => true, "id" => $stmt->insert_id]);
 } else {
