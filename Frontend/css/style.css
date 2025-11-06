@@ -43,7 +43,7 @@ section {
   gap: 1.5rem;
   min-height: 100vh;
   align-items: center;
-  background: rgba(0, 0, 0, 0.7) url("modern-poker-cards-composition.jpg") center center fixed;
+  background: rgba(0, 0, 0, 0.7) url("../img/modern-poker-cards-composition.jpg") center center fixed;
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -159,8 +159,9 @@ section {
 }
 
 .image {
-  width: 600px;
-  height: 500px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
   border-radius: 15px;
   object-fit: cover;
   flex-shrink: 0;
@@ -228,6 +229,131 @@ section {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   width: 32%;
 }
+footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  background: linear-gradient(to right, #313132, #000000);
+  color: #fff;
+  padding: 100px 0 30px;
+  font-size: 13px;
+  line-height: 30px;
+}
+.desc {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  color: #fbf2f2;
+  letter-spacing: normal;
+  max-width: 950px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.row {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.logo1 {
+  width: 200px;
+  margin-bottom: 30px;
+}
+.logo1 {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #038c5a;
+}
+
+ .logo1 i {
+  text-decoration: none;
+}
+.col h2 {
+  position: relative;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+.email_id {
+  width: fit-content;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0;
+}
+.email_id a {
+  color: white;
+  text-decoration: none;
+}
+.form1 {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+.form1 .fa-regular {
+  font-size: 18px;
+  margin-right: 10px;
+}
+.form1 input {
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+.form1 button {
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+.form1 button .fa-solid {
+  font-size: 16px;
+  color: #ccc;
+}
+.social .fa-brands {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  margin-right: 15px;
+  background: #fff;
+  color: #000;
+  transition: all 0.3s ease;
+}
+.social .fa-facebook:hover {
+  background: #1877f2;
+  color: #fff;
+}
+
+.social .fa-instagram:hover {
+  background: #e4405f;
+  color: #fff;
+}
+
+
+.social .fa-twitter:hover {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.social .fa-whatsapp:hover {
+  background: #25d366;
+  color: #fff;
+}
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 20px auto;
+}
+.c {
+  text-align: center;
+  font-size: 2-px;
+}
 
 @media (max-width: 800px) {
   .download-section {
@@ -242,5 +368,53 @@ section {
 
   .download-text {
     max-width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  footer {
+    bottom: unset;
+  }
+}
+@media (max-width: 1500px) {
+  header .logo {
+    margin-left: -100px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 1100px) {
+  header .logo {
+    margin-left: -80px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 60%;
+  }
+  header .logo {
+    font-size: 18px;
+    margin-top: 8px;
+    margin-left: 3px;
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 55%;
+  }
+  header .logo {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 1px;
+  }
+}
+@media (max-width: 768px) {
+  header .logo {
+    margin-right: -5px;
+    font-size: 13px;
+    margin-top: 5px;
+    margin-left: -5px;
+  }
+   header {
+    height: 45px;
   }
 }
