@@ -47,8 +47,8 @@ b.addEventListener("click", () => {
 document.getElementById("adding").addEventListener("submit", function (event) {
   event.preventDefault();
   const v = document.getElementById("s1").value.trim();
-  if (v.length < 3) {
-    alert("Name must be at least 3 characters long.");
+  if (typeof v !== 'string' || v.length < 3 || !isNaN(v)) {
+    alert("Name must be a string with at least 3 characters and not a number.");
     return;
   }
   const user = {
