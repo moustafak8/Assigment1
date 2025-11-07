@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] !== 'GET') {
     exit;
 }
 $stmt = $con->prepare("SELECT * FROM player_scores
-ORDER BY score DESC , duration ASC
+ORDER BY score DESC,duration ASC
 LIMIT 5
 ");
 if ($stmt->execute()) {
